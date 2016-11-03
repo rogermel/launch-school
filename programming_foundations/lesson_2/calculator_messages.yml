@@ -1,0 +1,28 @@
+en:
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to use a valid name."
+  first_num: "What's the first number?"
+  second_num: "What's the second number"
+  invalid_num: "Number provided is not valid!"
+  hello: "Hi!"
+  choice: "Must choose 1, 2, 3, 4!"
+  op_prompt: |+
+    What operation would you like to perform?
+      1) add
+      2) subtract
+      3) multiply
+      4) divide
+  
+fr:
+  welcome: "Bienvenu à Calculatrice! Entrez votre nom:"
+  valid_name: "Assurez-vous d'utiliser un nom valid."
+  first_num: "Quel est le premier nombre?"
+  invalid_num: "Le nombre fourni n'est pas valide!"
+  hello: "Salut!"
+  choice: "Vous devez choisir entre 1, 2, 3, 4!"
+  op_prompt: |+
+    Quelle opération voulez-vous réaliser?
+      1) addition
+      2) soustraction
+      3) multiplication
+      4) division
