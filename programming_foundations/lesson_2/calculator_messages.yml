@@ -12,11 +12,20 @@ en:
       2) subtract
       3) multiply
       4) divide
+  add: 'Adding'
+  sub: 'Subtracting'
+  mul: 'Multiplying'
+  div: 'Dividing'
+  msg_op: ' the two numbers...'
+  result: 'The result is'
+  confirm_op: 'Do you want to perform an other calculation? (Y to calculate again)'
+  good_by: 'Thanks you for using the calculator. Good by!'
   
 fr:
   welcome: "Bienvenu à Calculatrice! Entrez votre nom:"
   valid_name: "Assurez-vous d'utiliser un nom valid."
   first_num: "Quel est le premier nombre?"
+  second_num: "Quel est le deuxième nombre?"
   invalid_num: "Le nombre fourni n'est pas valide!"
   hello: "Salut!"
   choice: "Vous devez choisir entre 1, 2, 3, 4!"
@@ -26,3 +35,11 @@ fr:
       2) soustraction
       3) multiplication
       4) division
+  add: 'Addition'
+  sub: 'Soustraction'
+  mul: 'Multiplication'
+  div: 'Division'
+  msg_op: ' des deux nombres...'
+  result: 'Le résultat est'
+  confirm_op: 'Voulez-vous effectuer une autre opération? (Y pour calculer à nouveau)'
+  good_by: 'Merci d'avoir utiliser la calculatrice'. Au revoir!'

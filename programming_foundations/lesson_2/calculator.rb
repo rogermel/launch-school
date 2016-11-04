@@ -1,7 +1,7 @@
 require 'yaml'
 
 MESSAGES = YAML.load_file('calculator_messages.yml')
-LANGUAGE = 'en'
+LANG = 'fr'
 
 
 def messages(message, lang='en')
@@ -9,7 +9,7 @@ def messages(message, lang='en')
 end
 
 def prompt(key)
-  message = MESSAGES[LANGUAGE].include?(key) ? messages(key, LANGUAGE) : key
+  message = MESSAGES[LANG].include?(key) ? messages(key, LANG) : key
   puts "=> #{message}"
 end
 
@@ -28,10 +28,10 @@ end
 def operation_to_message(op)
   word =
     case op
-    when '1' then 'Adding'
-    when '2' then 'Subtracting'
-    when '3' then 'Multiplying'
-    when '4' then 'Dividing'
+    when '1' then MESSAGES[LANG]['add']
+    when '2' then MESSAGES[LANG]['sub']
+    when '3' then MESSAGES[LANG]['mul']
+    when '4' then MESSAGES[LANG]['div']
     end
   word
 end
@@ -48,7 +48,7 @@ loop do
   end
 end
 
-prompt MESSAGES[LANGUAGE]['hello'] + " #{name}"
+prompt MESSAGES[LANG]['hello'] + " #{name}"
 
 loop do
   num1 = ''
@@ -84,7 +84,7 @@ loop do
     end
   end
 
-  prompt("#{operation_to_message(operator)} the two numbers...")
+  prompt operation_to_message(operator) + MESSAGES[LANG]['msg_op']
 
   result =
     case operator
@@ -98,11 +98,11 @@ loop do
       num1.to_f / num2.to_f
     end
 
-  prompt "The result is #{result}"
+  prompt MESSAGES[LANG]['result'] + " #{result}"
 
-  prompt "Do you want to perform an other calculation? (Y to calculate again)"
+  prompt 'confirm_op'
   anwer = gets.chomp
   break unless anwer.downcase.start_with?('y')
 end
 
-prompt "Thanks you for using the calculator. Good by!"
+prompt 'good_by'
