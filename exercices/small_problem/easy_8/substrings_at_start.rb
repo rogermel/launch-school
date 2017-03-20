@@ -1,4 +1,4 @@
-# Undertand the problem:
+# Understand the problem:
 # - Input: string of character
 # - Output:
 #  -  array for which each element is all possible substrings of original input string.

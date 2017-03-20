@@ -1,4 +1,4 @@
-# Undertand the problem:
+# Understand the problem:
 # - Input: array of number
 # - Output: number which are the sum of subsequent array
 #
