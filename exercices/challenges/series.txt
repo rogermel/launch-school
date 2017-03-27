@@ -1,0 +1,22 @@
+Understand the problem:
+Input:
+	- string of gidits
+Output:
+	- all the possible consecutive number series of 'length n'
+
+Description of Series class:
+	- save the size of the original string of digits in a @digits instance variable
+	- save the length of the string of digits
+	- to be done in #initialize method
+
+Algorithm of Series#slices:
+Input: integer which is the length of the array to be added in the final output
+	- raise an ArgumentError if input integer > @length
+	- create 'out' variable as an empty array
+	- make an array of chars from @digits => digits_a
+	- Unexpected issue comming from running test: convert each elements of digits_a to integer
+	- for 'each with index' of digits_a:
+		- create a subarray at the current index with lenght of n
+		- add this subarray to array 'out' if n <= the size of the sliced array at current index
+		to the end of digits_a
+	return out
