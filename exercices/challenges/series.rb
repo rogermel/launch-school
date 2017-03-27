@@ -7,9 +7,9 @@ class Series
 	def slices(n)
 		raise ArgumentError, "Argument must be less or equal to #{@length}" unless n <= @length
 		out = []
-		digits_a = @digits.chars
-		digits_a.map!(&:to_i)
-		digits_a.each_with_index { |digit, i| out << digits_a[i, n] if n <= digits_a[i..-1].size }
+		digits = @digits.chars.map(&:to_i)
+		
+		digits.each_with_index { |_, i| out << digits[i, n] if n <= digits[i..-1].size }
 		out
 	end
 end
