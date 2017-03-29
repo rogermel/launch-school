@@ -1,0 +1,30 @@
+Understand the problem:
+Input:
+	- integer
+Output:
+	- array of all primes number from 2 up to the number provided as argument
+
+Description of Series class:
+	- save the object Range into a @range instance variable during initialization
+	- provide a default value for initialize method
+	- public method :primes
+	- private method :primes?
+
+Sieve#primes:
+Input: none
+Output: array
+Algorithm of Sieve#primes:
+	- raise an ArgumentError if argument is not an Integer
+	- transform a Range to an array
+	- select all prime number by applying the prime? method to each element of the array
+
+Implicit knowleged:
+	- a prime number can only by divided by 1 or itself
+
+Sieve#prime?:
+Input: integer
+Output: boolean
+Algorithm of Sieve#primes?:
+	- for each integer in the range, return false if argument % n (current number in the range) is equal
+	  to 0
+	- return true, if we reach that point it means that the number is prime
