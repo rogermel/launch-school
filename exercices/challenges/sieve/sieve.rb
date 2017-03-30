@@ -10,5 +10,3 @@ class Sieve
 		end
 	end
 end
-
-p Sieve.new(1_000_0).primes

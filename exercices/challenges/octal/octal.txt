@@ -1,0 +1,30 @@
+Understand the problem:
+Description:
+	- Octal class perform the conversion from a string of octal number into decimal
+	- If the octal string is invalid then 0 is the decimal value
+
+Implicit knowledge:
+	- Base-8 valid number range from 0..7 => anu other character will make an invalid octal number
+
+Description of Octal class:
+	- Octal#octal? will check is number provided is valid octal representation
+	- ocatal number will be saved in @octal instance variable
+
+Octal#octal?:
+Input: array
+Output: boolean
+Algorithm of Octal#to_decimal:
+	- for each char
+		- if ASCII value is less than 0 or greater than 7 then return false
+
+
+Octal#to_decimal:
+Input: none
+Output: integer
+Algorithm of Octal#to_decimal:
+	- return 0 if @octal is not a valid octal number
+	- shift the first character if value is '0'
+	- map to integer
+	- reverse the array
+	- inject with index the number power 8 the exponent
+
