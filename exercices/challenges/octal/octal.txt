@@ -11,11 +11,11 @@ Description of Octal class:
 	- ocatal number will be saved in @octal instance variable
 
 Octal#octal?:
-Input: array
+Input: none
 Output: boolean
 Algorithm of Octal#to_decimal:
-	- for each char
-		- if ASCII value is less than 0 or greater than 7 then return false
+	- refactoring:
+		- does all? character in @octal instance variable match the RegEx for octal number => /[0-7]/
 
 
 Octal#to_decimal:

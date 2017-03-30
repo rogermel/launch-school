@@ -5,18 +5,16 @@ class Octal
 	end
 
 	def to_decimal
-		return 0 unless octal?(@octal)
+		return 0 unless octal?
 
 		@octal.shift if @octal[0] == '0'
-		@octal.map(&:to_i).reverse.each_with_index.inject(0) { |sum, (num, i)| sum + (num * 8 ** i) }
+		@octal.map(&:to_i)
+					.reverse
+					.each_with_index.inject(0) { |sum, (num, i)| sum + (num * 8 ** i) }
 	end
 
-	def octal?(octal)
-		octal.each do |num|
-			num = num.ord
-			return false if num < '0'.ord || num > '7'.ord
-		end
-		true
+	def octal?
+		@octal.all? { |i| i =~ /[0-7]/ }
 	end
 
 	private :octal?
