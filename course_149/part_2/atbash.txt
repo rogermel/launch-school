@@ -4,9 +4,9 @@ Description:
 	- in class Atbash, use a contante hash to store letter to cipher code (CIPHER)
 
 Implicit knowledge from test suite:
-	- digit are not converted
+	- digit are not converted and are return as-is
 	- character other than letter and digit should be removed from original string
-	- add a space character after a group of five letter
+	- add a space character after a group of five letter but not for last word of 5 chars
 
 Description of Atbash class:
 	- class method :encode
@@ -15,10 +15,11 @@ Atbash#encode:
 Input: string
 Output: coded cipher chain
 Algorithm of Atbash#encode:
-	- initialize out temporary variable as an array
-	- strip any space
-	- downcase the string input
-	- global substitute character other than [a-z0-9] by nothing => ''
+	- initialize out as an array
+	- do the following with input string
+		- strip any space
+		- downcase the string input
+		- global substitute character other than [a-z0-9] by nothing => ''
 	- enumerate with index:
 		- append CIPHER value if value is included? in CIPER
 		- else append value as it is
