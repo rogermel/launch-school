@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Practice Problems: Functions</title>
+	</head>
+	<body>
+		
+		<script>
+			// Exo. 1
+			// Function definition
+			function average(arr) {
+				return sum(arr) / arr.length;
+			}
+			// Function call
+			// console.log(average(5, 6, 9));
+			
+			// Exo. 2
+			function sum(arr) {
+				var total = 0;
+				for (var num in arr) {
+					total += num;
+				}
+				return total;
+			}
+
+			// Exo. 3
+			function average2(arr) {
+				var total = 0;
+				for (var num in arr) {
+					total += num;
+				}
+				return total / arr.length;
+			}
+
+			// console.log(average2([25, 32, 8, 9, 8]));
+			console.log(average([25, 32, 8, 9, 8]));
+
+			var temperatures = [5, 9, 23, 30, 0];
+			console.log(average(temperatures));
+
+		</script>
+	</body>
+</html>

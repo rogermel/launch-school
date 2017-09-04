@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Practice Problems: Operators and Conditionals</title>
+	</head>
+	<body>
+		
+		<script>
+			var apples = 3;
+			var bananas = 1;
+			var areEqual = apples === bananas;
+			var eitherOr = apples || bananas;
+
+			if (apples === bananas) {
+				console.log('Fruits are the same!');
+			} else {
+				if (apples == bananas) {
+					console.log("Same value number but different type.");
+				} else {
+					console.log('Fruits are not the same!');
+				}
+			}
+
+			console.log(areEqual);
+			console.log(eitherOr);
+			eitherOr = bananas || apples;
+			console.log(eitherOr);
+
+			var lastName = 'Mel';
+			var familyMessage = lastName === 'Mel' ? "You're part of the family!" : "You're not family.";
+			console.log(familyMessage);
+		</script>
+	</body>
+</html>

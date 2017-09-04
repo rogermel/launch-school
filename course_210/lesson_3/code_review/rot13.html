@@ -1,0 +1,33 @@
+<body>
+	<script>
+		const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+		const cipher = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+
+		function cipherCode(num) {
+			return cipher.charAt(num);
+		}
+
+		function rot13(str) {
+			var out = '';
+
+			for (var i = 0, len = str.length; i < len; i++) {
+				if (alphabet.includes(str[i])) {
+					var letter_position = alphabet.indexOf(str[i]);
+					out += cipherCode(letter_position);
+				} else {
+					out += str[i];
+				}
+			}
+
+			return out;
+		}
+
+		console.log(rot13('Teachers open the door, but you must enter by yourself.') ===
+			'Grnpuref bcra gur qbbe, ohg lbh zhfg ragre ol lbhefrys.');
+
+		console.log(rot13(rot13('Teachers open the door, but you must enter by yourself.')) ===
+			'Teachers open the door, but you must enter by yourself.');
+
+
+	</script>
+</body>

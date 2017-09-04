@@ -1,0 +1,20 @@
+<body>
+	<script>
+		function logOddNumbers(num) {
+			var i = 1;
+			while (i <= num) {
+				if (isOdd(i)) {
+					console.log(i);
+				}
+
+				i++;
+			}
+		}
+
+		function isOdd(number) {
+			return number % 2 !== 0;
+		}
+
+		logOddNumbers(19);
+	</script>
+</body>

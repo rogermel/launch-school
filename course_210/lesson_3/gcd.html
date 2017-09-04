@@ -1,0 +1,18 @@
+<body>
+	<script>
+		function gcd(num1, num2) {
+			var min = num1 <= num2 ? num1 : num2;
+
+			while (min > 0) {
+				if (num1 % min === 0 && num2 % min === 0) {
+					return min;
+				}
+				min--;
+			}
+		}
+
+		console.log(gcd(12, 4));
+		console.log(gcd(15, 10));
+		console.log(gcd(9, 2));
+	</script>
+</body>

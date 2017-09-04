@@ -1,0 +1,21 @@
+<body>
+	<script>
+		function isXor(op1, op2) {
+			if (!!op1 && !!op2 || !op1 && !op2) {
+				return false;
+			}
+
+			return true;
+		}
+
+		console.log(isXor(false, true));
+		console.log(isXor(true, false));
+		console.log(isXor(false, false));
+		console.log(isXor(true, true));
+
+		console.log(isXor(false, 3));
+		console.log(isXor('a', undefined));
+		console.log(isXor(null, ''));
+		console.log(isXor('2', 23));
+	</script>
+</body>

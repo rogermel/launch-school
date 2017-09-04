@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Explicit Primitive Type Coercions</title>
+	</head>
+	<body>
+		
+		<script>
+			// Converting Strings to Numbers
+			// console.log(Number('1'));
+			// console.log(Number('abc123'));
+
+			// console.log(parseInt('123', 10));
+			// console.log(parseInt('123.12', 10));
+			// console.log(parseInt('123.12'));
+			// console.log(parseFloat('123.12'));
+
+			// Converting Numbers to Strings
+			// console.log(String(123));
+			// console.log(String(1.23));
+			// console.log((123).toString());
+			// console.log((123.12).toString());
+			// console.log(123 + '');
+			// console.log('' + 123.12);
+
+			// Booleans to Strings
+			// console.log(String(true));
+			// console.log(String(false));
+			// console.log(true.toString());
+			// console.log(false.toString());
+
+			// Primitives to Booleans
+			// var a = 'true';
+			// var b = 'false';
+			// console.log(a === 'true');
+			// console.log(b == 'true');
+
+			// console.log(Boolean(null));
+			// console.log(Boolean(NaN));
+			// console.log(Boolean(0));
+			// console.log(Boolean(''));
+			// console.log(Boolean(false));
+			// console.log(Boolean(undefined));
+			// console.log(Boolean('abc'));
+			// console.log(Boolean(123));
+			// console.log(Boolean('true'));
+			// console.log(Boolean('false'));
+
+			console.log(!!(null));
+			console.log(!!(NaN));
+			console.log(!!(0));
+			console.log(!!(''));
+			console.log(!!(false));
+			console.log(!!(undefined));
+
+			console.log(!!('abc'));
+			console.log(!!(123));
+			console.log(!!('true'));
+			console.log(!!('false'));
+
+		</script>
+	</body>
+</html>

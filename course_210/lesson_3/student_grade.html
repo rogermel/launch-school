@@ -1,0 +1,27 @@
+<body>
+	<script>
+		var grade;
+		var score = 0;
+		var i = 1;
+		var mean;
+
+		while (i <= 3) {
+			var val = prompt('Enter score ' + String(i));
+			score += Number(val);
+			i++;
+		}
+
+		mean = score / 3;
+		if (mean >= 90) {
+			grade = 'A';
+		} else if (mean >= 70 && mean < 90) {
+			grade = 'B';
+		} else if (mean >= 50 && mean < 70) {
+			grade = 'C';
+		} else {
+			grade = 'F';
+		}
+
+		console.log('Based on the average of your 3 scores your letter grade is "' + grade + '".');
+	</script>
+</body>

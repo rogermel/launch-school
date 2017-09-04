@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Practice Problems: Variable Scopes in JavaScript (1)</title>
+	</head>
+	<body>
+		
+		<script>
+			// Exo.1
+			// function say() {
+			// 	if (false) {
+			// 		var a = 'hello from inside a block';
+			// 	}
+
+			// 	console.log(a);
+			// }
+			// say();
+
+			// Exo.2
+			// function hello() {
+			// 	a = 'hello';
+			// 	console.log(a);
+
+			// 	if (false) {
+			// 		var a = 'hello again';
+			// 	}
+			// }
+			// hello();
+			// console.log(a);
+
+			// Exo.3
+			// var a = 'hello';
+			// for (var i = 0; i < 5; i++) {
+			// 	var a = i;
+			// }
+			// console.log(a);
+
+			// Exo.4
+			// var a = 1;
+			// function foo() {
+			// 	a = 2;
+			// 	function bar() {
+			// 		a = 3;
+			// 		return 4;
+			// 	}
+
+			// 	return bar();
+			// }
+			// console.log(foo());
+			// console.log(a);
+
+			// Exo.5
+			// var a = 'global';
+
+			// function checkScope() {
+			// 	var a = 'local';
+			// 	function nested() {
+			// 		var a = 'nested';
+			// 		function supernested() {
+			// 			a = 'supernested';
+			// 			return a;
+			// 		}
+
+			// 		return supernested();
+			// 	}
+
+			// 	return nested();
+			// }
+
+			// console.log(checkScope());
+			// console.log(a);
+
+			// Exo.6
+			// var a = 'outer';
+			// var b = 'outer';
+
+			// console.log(a);
+			// console.log(b);
+			// setScope(a);
+			// console.log(a);
+			// console.log(b);
+
+			// function setScope(foo) {
+			// 	foo = 'inner';
+			// 	b = 'inner';
+			// }
+
+			// Exo.7
+			// var total = 50;
+			// var increment = 15;
+
+			// function incrementBy(increment) {
+			// 	total += increment;
+			// }
+
+			// console.log(total);
+			// incrementBy(10);
+			// console.log(total);
+			// console.log(increment);
+
+			// Exo.8
+			var a = 'outer';
+			console.log(a);
+			setScope();
+			console.log(a);
+
+			var setScope = function() {
+				a = 'inner';
+			};
+
+		</script>
+	</body>
+</html>

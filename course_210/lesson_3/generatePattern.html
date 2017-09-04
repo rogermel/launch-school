@@ -1,0 +1,23 @@
+<body>
+	<script>
+		function printStars(n) {
+			var out = '';
+			
+			for (var i = 0; i < n; i++) {
+				out += '*';
+			}
+			return out;
+		}
+
+		function generatePattern(n) {
+			var num_str = '';
+
+			for (var i = 1; i <= n; i++) {
+				num_str += String(i);
+				console.log(num_str + printStars(n - i));
+			}
+		}
+
+		console.log(generatePattern(7));
+	</script>
+</body>
