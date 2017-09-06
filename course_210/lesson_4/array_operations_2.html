@@ -1,0 +1,23 @@
+<body>
+	<script>
+		function indexOf(arr, val) {
+			for (var i = 0, len = arr.length; i < len; i++) {
+				if (val === arr[i]) {
+					return i;
+				}
+			}
+
+			return -1;
+		}
+
+		function lastIndexOf(arr, val) {
+			for (var i = arr.length; i >= 0; i--) {
+				if (val === arr[i]) {
+					return i;
+				}
+			}
+
+			return -1;
+		}
+	</script>
+</body>

@@ -1,0 +1,52 @@
+<body>
+	<script>
+		function lastInArray(arr) {
+			return arr[arr.length - 1];
+		}
+
+		function rollCall(arr) {
+			for (var i = 1, len = arr.length; i < len; i++) {
+				console.log(arr[i]);
+			}
+		}
+
+		function arrayReverse(arr) {
+			var out = [];
+			for (var i = arr.length - 1; i >= 0; i--) {
+				out.push(arr[i]);
+			}
+
+			return out;
+		}
+
+		function findArrayElement(val, arr) {
+			var idx_value = -1;
+			for (var i = 0, len = arr.length; i < len; i++) {
+				if (val === arr[i]) {
+					idx_value = i;
+					break;
+				}
+			}
+
+			return idx_value;
+		}
+
+		function strArray(arr) {
+			var out = '';
+			for (var i = 0, len = arr.length; i < len; i++) {
+				out += String(arr[i]);
+			}
+
+			return out;
+		}
+
+		const names = ['Mel', 'Leo', 'Warda', 'Noelia', 'Noa'];
+
+		rollCall(names);
+
+		console.log(arrayReverse(names));
+		console.log(findArrayElement('Noa', names));
+		console.log(strArray([1, 'a', 4]));
+
+	</script>
+</body>

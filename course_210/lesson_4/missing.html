@@ -1,0 +1,19 @@
+<body>
+	<script>
+		function missing(arr) {
+			var out = [];
+			for (var i = arr[0] + 1; i < arr[arr.length - 1]; i++) {
+				if (arr.indexOf(i) === -1) {
+					out.push(i);
+				}
+			}
+
+			return out;
+		}
+
+		console.log(missing([-3, -2, 1, 5]));
+		console.log(missing([1, 2, 3, 4]));
+		console.log(missing([1, 5]));
+		console.log(missing([6]));
+	</script>
+</body>
