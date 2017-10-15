@@ -1,0 +1,74 @@
+<body>
+	<script>
+		function objectHasProperty(obj, key) {
+			var keys = Object.keys(obj);
+			return keys.indexOf(key) !== -1;
+		}
+
+		function incrementProperty(obj, property) {
+			if (obj[property]) {
+				obj[property] += 1;
+			} else {
+				obj[property] = 1;
+			}
+
+			return obj[property];
+		}
+
+		function copyProperties(objFrom, toObj) {
+			var count = 0;
+			for (var prop in objFrom) {
+				toObj[prop] = objFrom[prop];
+				count++;
+			}
+
+			return count;
+		}
+
+		function wordCount(text) {
+			var count = {};
+			var words = text.split(' ');
+			var word;
+			for (var i = 0, len = words.length; i < len; i++) {
+				word = words[i];
+				if (!count[word]) {
+					count[word] = 0;
+				}
+
+				count[word] += 1;
+			}
+
+			return count;
+		}
+
+		var pets = {
+		  cat: 'Simon',
+		  dog: 'Dwarf',
+		  mice: null,
+		};
+
+		var wins = {
+		  steve: 3,
+		  susie: 4,
+		};
+
+		var hal = {
+		  model: 9000,
+		  enabled: true,
+		};
+		var sal = {};
+
+		console.log(objectHasProperty(pets, 'dog'));
+		console.log(objectHasProperty(pets, 'lizard'));
+		console.log(objectHasProperty(pets, 'mice'));
+
+		console.log(incrementProperty(wins, 'susie'));
+		console.log(incrementProperty(wins, 'lucy'));
+
+		console.log(copyProperties(hal, sal));
+
+		console.log(wordCount('box car cat bag box'));
+
+
+	</script>
+</body>

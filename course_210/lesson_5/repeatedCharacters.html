@@ -1,0 +1,28 @@
+<body>
+	<script>
+		function repeatedCharacters(str) {
+			var out = {};
+			var temp = {};
+			for (var i = 0, len = str.length; i < len; i++) {
+				val = str[i].toLowerCase();
+				if (temp[val] === undefined) {
+					temp[val] = 1;
+				} else {
+					temp[val] += 1;
+				}
+
+				if (temp[val] >= 2) {
+					out[val] = temp[val];
+				}
+			}
+
+			return out;
+		}
+
+		console.log(repeatedCharacters('Programming'));
+		console.log(repeatedCharacters('Combination'));
+		console.log(repeatedCharacters('Pet'));
+		console.log(repeatedCharacters('Paper'));
+		console.log(repeatedCharacters('Baseless'));
+	</script>
+</body>
